@@ -1,26 +1,23 @@
 class Battleship
 
-  def initialize
-    @computer_board = GameBoard.new
-    @player_board = GameBoard.new
+  def initialize(input, ouput)
+    @messager  = Messager.new(input, ouput)
+    @input      = input
+    @output     = output
   end
 
-  def welcome_message(input)
-    input.gets_chomp
-    p Welcome to BATTLESHIP/
-
-    p Would you like to (p)lay, read the (i)nstructions, or (q)uit?
-  end"
- end"
-
   def start_game(input)
-    input.gets.chomp.downcase
+    @messager.welcome
     if input == ("p") || input == "play"
       play_game
     elsif input == ("i") || input == "instructions"
-      game_overview
+      @messager.game_overview
     else
-      quit_game
+      @messager.game_over
     end
   end
+
+  def play_game
+    @new_game = Board.new(@input, @output)
+    
 end
