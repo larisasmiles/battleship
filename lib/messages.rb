@@ -20,6 +20,4 @@ module Messages
     p "LOSER"
     exit
   end
-
-
 end

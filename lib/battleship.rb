@@ -30,6 +30,7 @@ class Battleship
   end
 
   def computer_ship_placement
+    
     #computer player will place their ships
     #baseline computer should use random placements
     #need to validate ship coords
