@@ -1,20 +1,27 @@
-require './lib/message'
+require './lib/messages'
 require './lib/game_flow'
+
 class Battleship
 
+  include Messages
+
   def initialize
-    @message  = Message.new
+
   end
 
   def start_game
-    @message.welcome
-    input = gets.chomp
+    welcome_message
+    input = gets.chomp.downcase
     if input == ("p") || input == "play"
       play_game
     elsif input == ("i") || input == "instructions"
-      messager.game_overview
+      instructions
+      start_game
+    elsif input == ("q") || input == "quit"
+      end_game
     else
-      messager.game_over
+      p "invalid choice soldier"
+      start_game
     end
   end
 

@@ -10,7 +10,7 @@ require 'pry'
 
   def game_setup
     @computer_board.grid
-    binding.pry
+    # binding.pry
 
 
   end
