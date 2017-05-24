@@ -1,12 +1,7 @@
-class Masseger
 
-  def initialize(input, ouput)
-    @input = input
-    @output = output
-  end
+class Message
 
   def welcome
-    system "clear"
     p "Welcome to BATTLESHIP!!!"
     p "Would you like to (p)lay, read the (i)nstructions, or (q)uit?"
   end
