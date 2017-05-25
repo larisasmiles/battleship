@@ -33,7 +33,6 @@ class Computer
         cell.unit = true
       end
     end
-    binding.pry
   end
 
 
