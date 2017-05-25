@@ -29,14 +29,6 @@ class Battleship
     new_game = GameFlow.new
   end
 
-  def computer_ship_placement
-    
-    #computer player will place their ships
-    #baseline computer should use random placements
-    #need to validate ship coords
-
-    @message.computer_initiate_game
-  end
 
   def player_ship_placement
   end

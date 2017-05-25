@@ -7,6 +7,7 @@ class BattleshipTest < Minitest::Test
 
   def test_game_exists;
     game = Battleship.new(input, output)
+    
     assert_instance_of Battleship, game
   end
 
@@ -15,8 +16,4 @@ class BattleshipTest < Minitest::Test
 
     assert_equal
   end
-
-
-
-
 end

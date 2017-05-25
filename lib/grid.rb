@@ -1,5 +1,6 @@
 require './lib/cell.rb'
-require './lib/locations.rb'
+require './lib/coordinates.rb'
+require 'pry'
 
 class Grid
   attr_reader :game_grid, :locations
