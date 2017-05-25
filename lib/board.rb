@@ -10,7 +10,7 @@ class Board
     end
 
   def initial_grid
-    border
+  
     # ". 1 2 3 4" "\n"
     # ["A", [false, nil], [false, nil], [false, nil], [false, nil]] + "\n"
     # ["B", [false, nil], [false, nil], [false, nil], [false, nil]] + "\n"

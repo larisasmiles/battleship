@@ -1,13 +1,10 @@
 require './lib/messages'
-require './lib/game_flow'
+require './lib/computer'
 
 class Battleship
+    attr_reader :computer
 
   include Messages
-
-  def initialize
-
-  end
 
   def start_game
     welcome_message
@@ -26,13 +23,9 @@ class Battleship
   end
 
   def play_game
-    new_game = GameFlow.new
-  end
-
-
-  def player_ship_placement
+    @computer = Computer.new
+    computer.place_units
   end
 end
-
 b = Battleship.new
 b.start_game
