@@ -1,5 +1,6 @@
 require './lib/messages'
 require './lib/computer'
+require './lib/player'
 
 class Battleship
     attr_reader :computer
@@ -24,7 +25,13 @@ class Battleship
 
   def play_game
     @computer = Computer.new
-    computer.place_units
+    @player = Player.new
+    @computer.place_units
+    ai_message
+    player_input = gets.chomp.upcase
+    @player.place_units(player_input)
+    p @player.grid.game_grid
+
   end
 end
 b = Battleship.new
