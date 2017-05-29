@@ -29,5 +29,9 @@ class Player
         end
       end
     end
-
+# coords = [a1 a2]
+# grid.game_grid.each { |cell| if coords ==  cell.location && cell.ship == true }
+#   cell.hit = true
+# hit message
+# else respond with miss message
 end

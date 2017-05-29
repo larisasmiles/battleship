@@ -30,8 +30,7 @@ class Battleship
     ai_message
     player_input = gets.chomp.upcase
     @player.place_units(player_input)
-    p @player.grid.game_grid
-
+    computer.grid.display_map
   end
 end
 b = Battleship.new

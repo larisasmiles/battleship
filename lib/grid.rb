@@ -16,4 +16,16 @@ class Grid
       @game_grid << Cell.new(location)
     end
   end
+
+  def display_map
+    prep_map.each_slice(4) do |slice|
+    puts "#{slice.join(" ")}\n"
+    end
+  end
+
+  def prep_map
+    game_grid.map do |cell|
+      cell.hit
+    end
+  end
 end

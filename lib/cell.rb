@@ -4,7 +4,7 @@ class Cell
 
   def initialize(location)
     @unit = false
-    @hit  = ""
+    @hit  = "."
     @location = location
   end
 end
