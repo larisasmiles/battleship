@@ -1,11 +1,12 @@
 require './lib/messages'
 require './lib/computer'
 require './lib/player'
+require './lib/board'
 
 class Battleship
-    attr_reader :computer
-
+  attr_reader :computer
   include Messages
+  include Board
 
   def start_game
     welcome_message
@@ -27,10 +28,11 @@ class Battleship
     @computer = Computer.new
     @player = Player.new
     @computer.place_units
+    print display_grid
     ai_message
     player_input = gets.chomp.upcase
-    @player.place_units(player_input)
-    computer.grid.display_map
+    @player.parse_coords(player_input)
+    # computer.grid.display_map
   end
 end
 b = Battleship.new
